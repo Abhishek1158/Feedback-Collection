@@ -1,2 +1,2 @@
 const express=require('express');
-const user=require('../models/user')
+const user=require('../models/Feedback')

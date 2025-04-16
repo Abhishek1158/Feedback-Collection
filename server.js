@@ -26,37 +26,6 @@ mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopol
 app.get("/user",async (req,res) => {
     
 });
-<<<<<<< HEAD
-
-app.use(bodyParser.json());
-
-let feedbacks = [];
-let currentId = 1;
-// POST /feedback → Submit feedback
-app.post('/feedback', (req, res) => {
-    const { name, rating, message } = req.body;
-  
-    if (!name || !message || typeof rating !== 'number') {
-      return res.status(400).json({ error: 'Invalid input' });
-    }
-  
-    const feedback = {
-      id: currentId++,
-      name,
-      rating,
-      message,
-      timestamp: new Date().toISOString(),
-    };
-  
-    feedbacks.push(feedback);
-    res.status(201).json(feedback);
-  });
-  
-  // GET /feedback → List all feedbacks
-  app.get('/feedback', (req, res) => {
-    res.json(feedbacks);
-  });
-=======
 
 app.use(bodyParser.json());
 
@@ -87,4 +56,32 @@ app.post('/feedback', (req, res) => {
     res.json(feedbacks);
   });
 
->>>>>>> origin/master
+// app.use(bodyParser.json());
+
+// let feedbacks = [];
+// let currentId = 1;
+// // POST /feedback → Submit feedback
+// app.post('/feedback', (req, res) => {
+//     const { name, rating, message } = req.body;
+  
+//     if (!name || !message || typeof rating !== 'number') {
+//       return res.status(400).json({ error: 'Invalid input' });
+//     }
+  
+//     const feedback = {
+//       id: currentId++,
+//       name,
+//       rating,
+//       message,
+//       timestamp: new Date().toISOString(),
+//     };
+  
+//     feedbacks.push(feedback);
+//     res.status(201).json(feedback);
+//   });
+  
+//   // GET /feedback → List all feedbacks
+//   app.get('/feedback', (req, res) => {
+//     res.json(feedbacks);
+//   });
+
