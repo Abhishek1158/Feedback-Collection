@@ -1,1 +1,1 @@
-feedback.js is of route folder
+feedback.js is of routes folder
